@@ -15,7 +15,7 @@ public class LSAVLApp{
          System.out.println(tree2.getInsertOpCount()+","+tree2.getSearchOpCount());
       }else{
 			tree2 = new Tree2();
-         System.out.println(tree2);
+         tree2.allAreas();
       System.out.println("Insert Operation Count: " + tree2.getInsertOpCount());
       System.out.println("Search Operation Count: " + tree2.getSearchOpCount());}
 	}

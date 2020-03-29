@@ -18,8 +18,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
 
    public void fixHeight ( BinaryTreeNode<dataType> node ) //NEW
    {
-      node.height = Math.max (height (node.left),
-      height (node.right)) + 1;
+      node.height = Math.max (height (node.left), height (node.right)) + 1;
    }
    
    public BinaryTreeNode<dataType> rotateRight( BinaryTreeNode<dataType> p ) //NEW
@@ -62,6 +61,20 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
    
    public void insert ( dataType d )
    {
+      root = insert (d, root);
+   }
+   public BinaryTreeNode<dataType> insert ( dataType d, BinaryTreeNode<dataType> node )
+   {
+      if (node == null)
+         return new BinaryTreeNode<dataType> (d, null, null);
+      if (d.compareTo (node.data) <= 0)
+         node.left = insert (d, node.left);
+      else
+         node.right = insert (d, node.right);
+      return balance (node);
+   }
+   /*public void insert ( dataType d )
+   {
       if (root == null)
          root = new BinaryTreeNode<dataType> (d, null, null);
       else
@@ -85,7 +98,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
             insert (d, node.right);
       }
       return balance(node); //NEW
-   }
+   }*/
    
    public BinaryTreeNode<dataType> find ( dataType d )
    {
