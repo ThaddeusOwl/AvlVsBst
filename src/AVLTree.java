@@ -67,6 +67,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
    {
       if (node == null)
          return new BinaryTreeNode<dataType> (d, null, null);
+      insertOpCount++;
       if (d.compareTo (node.data) <= 0)
          node.left = insert (d, node.left);
       else
