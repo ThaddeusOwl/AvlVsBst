@@ -24,8 +24,19 @@ public static void main(String [] args) throws FileNotFoundException{
 			lines[i]=lineSplit[0];
       }
    
-   System.out.println("Dataset length,BSTInsertOpCount,BSTSearchOpCount,ArrayInsertOpCount,ArraySearchOpCount"+"\n");
-	for(int i=0; i<dataset.length; i++){
+   System.out.println("Dataset length,BSTInsertOpCount,BSTSearchOpCount,AVLInsertOpCount,AVLSearchOpCount"+"\n");
+	
+   if(args.length==1){
+      for (int j=0; j<Integer.parseInt(args[0]); j++){
+         String[] inputParam = new String[]{lines[j], args[0], "randomizedLSD.txt"};
+         LSBSTApp.main(inputParam);
+         LSAVLApp.main(inputParam);
+         //String runFile;
+         //runFile = (runFile + LSBSTApp.main(inputParam) + LSAVLApp.main(inputParam));
+         //System.out.println(runFile); 
+      }
+   }else{
+   for(int i=0; i<dataset.length; i++){
       for(int j=0; j<dataset[i]; j++){
          String[] inputParam= new String[]{lines[j],String.valueOf(dataset[i]),"randomizedLSD.txt"};
          
@@ -33,7 +44,7 @@ public static void main(String [] args) throws FileNotFoundException{
          LSAVLApp.main(inputParam);
 		}
 	}
-
+   }
 
 
 }
