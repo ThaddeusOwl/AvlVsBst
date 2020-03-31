@@ -1,0 +1,12 @@
+Dataset length,BSTInsertOpCount,BSTSearchOpCount,AVLInsertOpCount,AVLSearchOpCount
+
+10,22,1,21,1
+10,22,3,21,5
+10,22,5,21,5
+10,22,3,21,3
+10,22,5,21,5
+10,22,5,21,5
+10,22,7,21,3
+10,22,9,21,7
+10,22,7,21,7
+10,22,9,21,7
