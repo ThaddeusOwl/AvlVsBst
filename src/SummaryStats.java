@@ -44,7 +44,7 @@ public class SummaryStats{
       for(int n=0; n<dataset.length; n++){
          String fileName = ("DataSet"+dataset[n]);
          String[][] summaryData = toSummaryArray(toRawArray(fileName, dataset[n]));
-         for(int j=0; j<n; j++){
+         for(int j=0; j<3; j++){
             for(int i=0; i<5; i++){
                System.out.print(summaryData[i][j]+",");
             }
