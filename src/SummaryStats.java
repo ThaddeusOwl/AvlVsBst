@@ -23,7 +23,7 @@ public class SummaryStats{
    public String[][] toSummaryArray(String[][] rawData){
       String[][] toReturn = new String[5][3];
       for(int i=0; i<5; i++){
-         int min=10000;
+         int min=100000;
          int max=0;
          int avg=0;
          for(int j=0; j<rawData[i].length; j++){
