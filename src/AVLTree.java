@@ -1,9 +1,15 @@
+/**
+*AVLTree.java: Inherits Binary Search Tree and adds on features such as balancing
+*@ThaddeusOwl, 29-03-2020
+*/
+
 public class AVLTree<dataType extends Comparable<? super dataType>> extends BinaryTree<dataType> 
 {
 
    int insertOpCount = 0;
    int searchOpCount = 0;
    
+   /**Calculates the height at a specific node(parameter) */
    public int height ( BinaryTreeNode<dataType> node ) //NEW
    {
       if (node != null)
@@ -11,16 +17,19 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       return -1;
    }
    
+   /**Calculates the difference in height of the left and right hand side of a specific node(parameter) */
    public int balanceFactor ( BinaryTreeNode<dataType> node ) //NEW
    {
       return height (node.right) - height (node.left);
    }
-
+   
+   /**Increases the height variable at a node(parameter) by 1 */
    public void fixHeight ( BinaryTreeNode<dataType> node ) //NEW
    {
       node.height = Math.max (height (node.left), height (node.right)) + 1;
    }
    
+   /**Rotates the tree right at a specific node(parameter) */
    public BinaryTreeNode<dataType> rotateRight( BinaryTreeNode<dataType> p ) //NEW
    {
       BinaryTreeNode<dataType> q = p.left;
@@ -31,6 +40,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       return q;
    }
    
+   /**Rotates the tree left at a specific node(parameter) */
    public BinaryTreeNode<dataType> rotateLeft( BinaryTreeNode<dataType> q ) //NEW
    {
       BinaryTreeNode<dataType> p = q.right;
@@ -41,6 +51,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       return p;
    }
    
+   /**Balances the tree at a specific node(parameter) */
    public BinaryTreeNode<dataType> balance ( BinaryTreeNode<dataType> p ) //NEW
    {
       fixHeight (p);
@@ -59,10 +70,12 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       return p;
    }
    
+   /**Inserts the first node of a tree. Takes data of node as a parameter */
    public void insert ( dataType d )
    {
       root = insert (d, root);
    }
+   /**Inserts a new node at a specific node(2nd parameter), and then balances the tree. Data of node=first parameter*/
    public BinaryTreeNode<dataType> insert ( dataType d, BinaryTreeNode<dataType> node )
    {
       if (node == null)
@@ -74,33 +87,8 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
          node.right = insert (d, node.right);
       return balance (node);
    }
-   /*public void insert ( dataType d )
-   {
-      if (root == null)
-         root = new BinaryTreeNode<dataType> (d, null, null);
-      else
-         insert (d, root);
-   }
-   public BinaryTreeNode<dataType> insert ( dataType d, BinaryTreeNode<dataType> node )
-   {
-      insertOpCount++;
-      if (d.compareTo (node.data) <= 0)
-      {
-         if (node.left == null)
-            node.left = new BinaryTreeNode<dataType> (d, null, null);
-         else
-            insert (d, node.left);
-      }
-      else
-      {
-         if (node.right == null)
-            node.right = new BinaryTreeNode<dataType> (d, null, null);
-         else
-            insert (d, node.right);
-      }
-      return balance(node); //NEW
-   }*/
    
+   /**Searchers for a node in the tree with the specified data(parameter) */
    public BinaryTreeNode<dataType> find ( dataType d )
    {
       if (root == null)
@@ -108,6 +96,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       else
          return find (d, root);
    }
+   /**Searchers for a node in the tree with the specified data(parameter 1) starting at the specified node(parameter 2) */
    public BinaryTreeNode<dataType> find ( dataType d, BinaryTreeNode<dataType> node )
    {
       searchOpCount++;
@@ -120,10 +109,12 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
          return (node.right == null) ? null : find (d, node.right);
    }
    
+   /**Searchers for and eletes node with a specified datatype(parameter) */
    public void delete ( dataType d )
    {
       root = delete (d, root);
-   }   
+   }
+   /**Searchers for and deletes node with a specified data type(parameter 1), starting search at a specified node(parameter 2)*/   
    public BinaryTreeNode<dataType> delete ( dataType d, BinaryTreeNode<dataType> node )
    {
       if (node == null) return null;
@@ -144,6 +135,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       return node;
    }
    
+   /**Searchers for and returns the node with the smallest data value*/
    public BinaryTreeNode<dataType> findMin ( BinaryTreeNode<dataType> node )
    {
       if (node != null)
@@ -151,7 +143,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
             node = node.left;
       return node;
    }
-
+   /**Searchers for and removes node with the smallest data value*/
    public BinaryTreeNode<dataType> removeMin ( BinaryTreeNode<dataType> node )
    {
       if (node == null)

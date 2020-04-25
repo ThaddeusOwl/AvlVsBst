@@ -17,9 +17,6 @@ public class BinaryTreeNode<dataType>
       height = -1;
    }
    
-   //public void updateHeight(){
-      //height = Math.max((left.height), (right.height))}
-   
    BinaryTreeNode<dataType> getLeft () { return left; }
    BinaryTreeNode<dataType> getRight () { return right; }
    

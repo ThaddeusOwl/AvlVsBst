@@ -81,7 +81,7 @@ public class BinaryTree<dataType>
       }   
    }
 
-   public void levelOrder ()
+   /*public void levelOrder ()
    {
       if (root == null)
          return;
@@ -96,6 +96,6 @@ public class BinaryTree<dataType>
          if (node.getRight () != null)
             q.enQueue (node.getRight ());
       }
-   }
+   }*/
    
 }

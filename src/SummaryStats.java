@@ -1,10 +1,18 @@
+/**
+*SummaryStats.java: Summarises data in DataSet CSV files produced by LSTest
+*Ouput: CSV format
+*Author: @ThaddeusOwl, 02-04-2020
+*/
+
+
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class SummaryStats{
 
-
+   /**Reads into a 2D array a specified number of rows(parameter 2) of specified file(parameter 1)*/
    public String[][] toRawArray(String fileName, int rows) throws FileNotFoundException{
       String[][] toReturn = new String[5][rows];
       Scanner file = new Scanner(new File(fileName+".csv"));
@@ -19,7 +27,7 @@ public class SummaryStats{
       } 
       return toReturn;   
    }
-   
+   /**Summarizes a 5 column Array by finding the min, max and avg of each column. Output: 3x5 Array*/
    public String[][] toSummaryArray(String[][] rawData){
       String[][] toReturn = new String[5][3];
       for(int i=0; i<5; i++){
@@ -39,6 +47,7 @@ public class SummaryStats{
       return toReturn; 
    }
    
+   /**The rumMethod: Uses the toRawArray and toSummaryArray method repeatedly for each DataSet csv file */
    public void runMethod() throws FileNotFoundException{
       int[] dataset=new int[]{10, 297, 593, 947, 1243, 1647, 1943, 2227, 2543, 2976};
       for(int n=0; n<dataset.length; n++){

@@ -1,3 +1,11 @@
+/**
+*Tree2.java - Reads in Load Shedding Data from file to an AVL tree
+*Provides method to search through it
+*@ThaddeusOwl, 29-03-2020
+*Use Tree(int,string) if you want to change the dataset length or input file
+*else use Tree() for default settings
+*/
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -17,7 +25,7 @@ public class Tree2{
          avlTree.insert(new Data(lineSplit[0],lineSplit[1]));
 		}
    }
-   /**reads in specified dataset length of specified file into avlt */
+   /**reads in specified dataset length of specified file into avl */
    public Tree2(int a, String b) throws FileNotFoundException{
 		this.n=a;
       if(b.equals("default")){

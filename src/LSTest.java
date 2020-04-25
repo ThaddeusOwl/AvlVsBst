@@ -1,8 +1,9 @@
 /**
-*LSTest.java - Executes bst and array data structure apps multiple times with with multiple dat lengths
+*LSTest.java - Executes bst and array data structure apps multiple times with a specified, or else multiple, dataset length/s.
 *Outputs info in csv format 
-*' java LSTest ': prints "Dataset length,BSTInsertOpCount,BSTSearchOpCount,ArrayInsertOpCount,ArraySearchOpCount"
-*Author: @ThaddeusOwl, 03-2020
+*' java LSTest ': prints, for multiple dataset lengths, "Dataset length,BSTInsertOpCount,BSTSearchOpCount,AVLInsertOpCount,AVLSearchOpCount"
+*' java LSTest x ': prints, for a dataset length of x, "Dataset length,BSTInsertOpCount,BSTSearchOpCount,AVLInsertOpCount,AVLSearchOpCount"
+*Author: @ThaddeusOwl, 29-03-2020
 */
 
 import java.io.File;
