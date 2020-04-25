@@ -1,9 +1,8 @@
-/**
-*LSAVLApp.java - Provides load shedding data
+/**LSAVLApp.java - Provides load shedding data
 *' java LSAVLApp ': prints all load shedding details to standard output
 *' java LSAVLApp "2_13_04" ': prints details for Stage 2, 13th of the month, starting time of 04:00
 *' java LSAVLApp searchDetails datasetLength fileName ': same as above but changes default dataset length and input file 
-*Author: @ThaddeusOwl, 29-03-2020
+*@author ThaddeusOwl, 29-03-2020
 */
 
 import java.io.FileNotFoundException;

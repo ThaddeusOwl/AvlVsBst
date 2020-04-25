@@ -1,7 +1,6 @@
-/** 
-*runSummaryStats.java: Executes the runMethod in SummaryStats
+/** runSummaryStats.java: Executes the runMethod in SummaryStats
 *java runSummaryStats: produces the min, max and avg of each column for 10 dataset files of different lengths, in csv format
-*Author: @ThaddeusOwl, 02-04-2020
+*@autor ThaddeusOwl, 02-04-2020
 */
 
 

@@ -1,7 +1,6 @@
-/**
-*SummaryStats.java: Summarises data in DataSet CSV files produced by LSTest
+/** SummaryStats.java: Summarises data in DataSet CSV files produced by LSTest
 *Ouput: CSV format
-*Author: @ThaddeusOwl, 02-04-2020
+*@author ThaddeusOwl, 02-04-2020
 */
 
 

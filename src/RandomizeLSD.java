@@ -1,6 +1,5 @@
-/**
-*Reads in LS file, shuffles Data and outputs in a new order
-*Author: @ThaddeusOwl, 03-2020
+/**Reads in LS file, shuffles Data and outputs in a new order
+*@author ThaddeusOwl, 03-2020
 */
 
 

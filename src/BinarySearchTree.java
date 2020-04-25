@@ -1,6 +1,9 @@
 // Hussein's Binary Search Tree
 // 27 March 2017
 // Hussein Suleman
+/**BinarySearchTree.java: Inherits BinaryTree and creates methods to add, remove and search through nodes, as well as count the number of key operations it takes to do so.
+*/
+
 
 public class BinarySearchTree<dataType extends Comparable<? super dataType>> extends BinaryTree<dataType>
 {

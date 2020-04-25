@@ -1,7 +1,6 @@
-/**
-*Tree.java - Reads in Load Shedding Data from file to a binary search tree
+/** Tree.java - Reads in Load Shedding Data from file to a binary search tree
 *Provides method to search through it
-*@ThaddeusOwl, 01-03-2020
+*@author ThaddeusOwl, 01-03-2020
 *Use Tree(int,string) if you want to change the dataset length or input file
 *else use Tree() for default settings
 */

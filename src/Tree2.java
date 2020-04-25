@@ -1,7 +1,6 @@
-/**
-*Tree2.java - Reads in Load Shedding Data from file to an AVL tree
+/** Tree2.java - Reads in Load Shedding Data from file to an AVL tree
 *Provides method to search through it
-*@ThaddeusOwl, 29-03-2020
+*@author ThaddeusOwl, 29-03-2020
 *Use Tree(int,string) if you want to change the dataset length or input file
 *else use Tree() for default settings
 */

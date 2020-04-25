@@ -1,6 +1,5 @@
-/**
-*AVLTree.java: Inherits Binary Search Tree and adds on features such as balancing
-*@ThaddeusOwl, 29-03-2020
+/**AVLTree.java: Inherits Binary Search Tree and adds on features such as balancing
+*@author ThaddeusOwl, 29-03-2020
 */
 
 public class AVLTree<dataType extends Comparable<? super dataType>> extends BinaryTree<dataType> 

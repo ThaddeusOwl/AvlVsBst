@@ -1,9 +1,8 @@
-/**
-*LSBSTApp.java - Provides load shedding data
+/**LSBSTApp.java - Provides load shedding data
 *' java LSBSTApp ': prints all load shedding details to standard output
 *' java LSBSTApp "2_13_04" ': prints details for Stage 2, 13th of the month, starting time of 04:00
 *' java LSBSTApp searchDetails datasetLength fileName ': same as above but changes default dataset length and input file 
-*Author: @ThaddeusOwl, 01-03-2020
+*@author ThaddeusOwl, 01-03-2020
 */
 
 import java.io.FileNotFoundException;
